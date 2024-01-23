@@ -1,0 +1,20 @@
+//Write an app that reads an integer then determines and displays whether it's odd or even
+using System;
+
+public class OddOrEven
+{
+    public static void Main() // Main method begins execution    
+    {
+        int input_num; //declare a number to store user input
+        int remainder; //declare a remainder - whether or not input_num has a remainder
+        Console.Write("Check whether a number is even or odd\n"); //display message
+        Console.Write("Input an integer : "); //promp user input
+        input_num = Convert.ToInt32(Console.ReadLine()); // read the number from user input
+        remainder = input_num % 2; //calculate remainder
+        if (remainder == 0) //if no remainder the number is even
+            Console.WriteLine("{0} is an even number.\n", input_num); //display message the number is e even
+        else //if has remainder the number is odd
+            Console.WriteLine("{0} is an odd number.\n", input_num);//display message the number is e even
+    }
+}
+

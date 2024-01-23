@@ -1,0 +1,37 @@
+using System;
+
+public class BankAccount {
+  
+   /*  This program will calculate the total of a bank account
+   */
+
+   public static void Main(double[] args) {
+   		
+      double starting_balance;   // The starting balance, to be input by the user.
+      double amount_deposit;      // The amount of deposit, to be input by the user.
+      double amount_withdrawals;  // The amount of withdrawals, to be input by the user.
+         
+      double total; // Total amount of the bank account, in dollars.
+	 
+      /* Ask the user for the starting balance, amount of deposit, and amount of withdrawals  */
+      
+      Console.WriteLine("The starting balance in $:  ");
+      starting_balance = Convert.ToDouble(Console.ReadLine());
+	 	   
+      Console.WriteLine("The amount of deposit in $:     ");
+      amount_deposit = Convert.ToDouble(Console.ReadLine());
+
+      Console.WriteLine("The amount of withdrawals in $:   ");
+      amount_withdrawals = Convert.ToDouble(Console.ReadLine());
+            
+      /* Calculate the total of a bank account. */
+      total = (starting_balance) + (amount_deposit) - (amount_withdrawals); 
+      
+      /* Report the result back to the user. */      
+      Console.WriteLine("The current balance in the bank account is in $:");
+      string total_acc = total.ToString("C"); // Formatted output!
+      Console.WriteLine(total_acc);  
+
+   }  // end main()
+ 
+}  // end class

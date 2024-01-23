@@ -1,0 +1,202 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TTTGameApp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            const int E = 0;
+            const int X = 1;
+            const int O = 2;
+            
+            int square1 = E;
+            int square2 = E;
+            int square3 = E;
+            int square4 = E;
+            int square5 = E;
+            int square6 = E;
+            int square7 = E;
+            int square8 = E;
+            int square9 = E;
+
+            while (true)
+            {
+                if (square1 == E)
+                    Console.Write(" |");
+                else if (square1 == X)
+                    Console.Write("X|");
+                else
+                    Console.Write("O|");
+                if (square2 == E)
+                    Console.Write(" |");
+                else if (square2 == X)
+                    Console.Write("X|");
+                else
+                    Console.Write("O|");
+                if (square3 == E)
+                    Console.Write(" ");
+                else if (square3 == X)
+                    Console.Write("X");
+                else
+                    Console.Write("O");
+
+                Console.WriteLine("\n-----");
+
+                if (square4 == E)
+                    Console.Write(" |");
+                else if (square4 == X)
+                    Console.Write("X|");
+                else
+                    Console.Write("O|");
+                if (square5 == E)
+                    Console.Write(" |");
+                else if (square5 == X)
+                    Console.Write("X|");
+                else
+                    Console.Write("O|");
+                if (square6 == E)
+                    Console.Write(" ");
+                else if (square6 == X)
+                    Console.Write("X");
+                else
+                    Console.Write("O");
+
+                Console.WriteLine("\n-----");
+
+                if (square7 == E)
+                    Console.Write(" |");
+                else if (square7 == X)
+                    Console.Write("X|");
+                else
+                    Console.Write("O|");
+                if (square8 == E)
+                    Console.Write(" |");
+                else if (square8 == X)
+                    Console.Write("X|");
+                else
+                    Console.Write("O|");
+                if (square9 == E)
+                    Console.Write(" ");
+                else if (square9 == X)
+                    Console.Write("X");
+                else
+                    Console.Write("O");
+
+                
+                // Test if the player won
+                if (
+                (square1 == X && square2 == X && square3 == X) ||
+                (square4 == X && square5 == X && square6 == X) ||
+                (square7 == X && square8 == X && square9 == X) ||
+                (square1 == X && square4 == X && square7 == X) ||
+                (square2 == X && square5 == X && square8 == X) ||
+                (square3 == X && square6 == X && square9 == X) ||
+                (square1 == X && square5 == X && square9 == X) ||
+                (square3 == X && square5 == X && square7 == X))
+                {                   
+                    Console.WriteLine("\nPlayer wins!");
+                    Console.ReadLine();                    
+                    break;
+                }
+                // Test if the computer won
+                if (
+                (square1 == O && square2 == O && square3 == O) ||
+                (square4 == O && square5 == O && square6 == O) ||
+                (square7 == O && square8 == O && square9 == O) ||
+                (square1 == O && square4 == O && square7 == O) ||
+                (square2 == O && square5 == O && square8 == O) ||
+                (square3 == O && square6 == O && square9 == O) ||
+                (square1 == O && square5 == O && square9 == O) ||
+                (square3 == O && square5 == O && square7 == O))
+                {                    
+                    Console.WriteLine("\nComputer wins!");
+                    Console.ReadLine();                    
+                    break;
+                }
+                
+                Console.WriteLine("\nWhich square you want to choose? (1-9):");
+                int playerChoice = int.Parse(Console.ReadLine());
+                Console.WriteLine("");
+
+                if (playerChoice == 1)
+                    square1 = X;
+                if (playerChoice == 2)
+                    square2 = X;
+                if (playerChoice == 3)
+                    square3 = X;
+                if (playerChoice == 4)
+                    square4 = X;
+                if (playerChoice == 5)
+                    square5 = X;
+                if (playerChoice == 6)
+                    square6 = X;
+                if (playerChoice == 7)
+                    square7 = X;
+                if (playerChoice == 8)
+                    square8 = X;
+                if (playerChoice == 9)
+                    square9 = X;
+
+
+                while (true)
+                {                   
+                    // Set one of the squares to 'O'
+                    Random random = new Random();
+                    int randomSquare = random.Next(1, 10);
+                    if (randomSquare == 1 && square1 == E)
+                    {                        
+                        square1 = O;
+                        break;
+                    }
+                    if (randomSquare == 2 && square2 == E)
+                    {                        
+                        square2 = O;                        
+                        break;
+                    }
+                    if (randomSquare == 3 && square3 == E)
+                    {                        
+                        square3 = O;                        
+                        break;
+                    }
+                    if (randomSquare == 4 && square4 == E)
+                    {
+                        square4 = O;                        
+                        break;
+                    }
+                    if (randomSquare == 5 && square5 == E)
+                    {                        
+                        square5 = O;                        
+                        break;
+                    }
+                    if (randomSquare == 6 && square6 == E)
+                    {                        
+                        square6 = O;                        
+                        break;
+                    }
+                    if (randomSquare == 7 && square7 == E)
+                    {                        
+                        square7 = O;                        
+                        break;
+                    }
+                    if (randomSquare == 8 && square8 == E)
+                    {                        
+                        square8 = O;                        
+                        break;
+                    }
+                    if (randomSquare == 9 && square9 == E)
+                    {                        
+                        square9 = O;                        
+                        break;
+                    }
+                 
+                }
+            }            
+        }
+    }
+}
+

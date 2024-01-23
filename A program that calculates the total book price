@@ -1,0 +1,36 @@
+using System;
+
+public class BookStore{
+
+     /*  Calculate and display the total book price all of the user’s input information.
+   */
+
+   public static void Main(string[] args) {
+
+      string book_name;   // Book name, to be input by the user.
+      int qty;      // Book quantity, to be input by the user.
+      double price;    // Book price, to be input by the user.
+	   
+      double final_price; // Total amount of the books.
+	   
+      /* Ask the user for all information about book. */
+      
+      Console.WriteLine("Enter the book name:  ");
+      book_name = Console.ReadLine();
+       
+      Console.WriteLine("Enter the quantity:   ");
+      qty = Convert.ToInt32(Console.ReadLine());
+      
+      Console.WriteLine("Enter the price:     ");
+      price = Convert.ToDouble(Console.ReadLine());
+	          
+      /* The total payment. */
+       final_price = (qty * price); 
+            
+      Console.WriteLine("The total price in dollars is: ");
+      string Book_final_price = final_price.ToString("C"); // Formatted output!
+      Console.WriteLine(Book_final_price);  
+
+   }  // end main()
+ 
+}  // end class
